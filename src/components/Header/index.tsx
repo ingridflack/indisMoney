@@ -1,12 +1,18 @@
 import Logo from '../Logo'
 import { Container, Content } from './styles'
 
-const Header = () => {
+interface HeaderProps {
+  onOpenNewTransactionModal: () => void
+}
+
+const Header = ({ onOpenNewTransactionModal }: HeaderProps) => {
   return (
     <Container>
       <Content>
         <Logo />
-        <button type="button">Nova transação</button>
+        <button type="button" onClick={onOpenNewTransactionModal}>
+          Nova transação
+        </button>
       </Content>
     </Container>
   )
