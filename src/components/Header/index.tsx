@@ -1,4 +1,3 @@
-import logoImg from '../../assets/logo.svg'
 import Logo from '../Logo'
 import { Container, Content } from './styles'
 
