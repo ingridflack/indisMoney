@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import { api } from '../services/api'
 import { Transaction, TransactionInput, TransactionProviderProps, TransactionsContextData } from '../types/types'
 
