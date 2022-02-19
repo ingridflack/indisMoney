@@ -9,7 +9,7 @@ const TransactionsTable = () => {
     <Container>
       <table>
         <thead>
-          <tr>
+          <tr className="column-title">
             <th>Título</th>
             <th>Valor</th>
             <th>Categoria</th>
@@ -20,7 +20,7 @@ const TransactionsTable = () => {
         <tbody>
           {transactions.map((transaction) => {
             return (
-              <tr key={transaction.id}>
+              <tr className="table-content" key={transaction.id}>
                 <td>{transaction.title}</td>
                 <td className={transaction.type}>
                   {new Intl.NumberFormat('pt-BR', {

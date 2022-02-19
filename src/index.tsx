@@ -15,7 +15,7 @@ createServer({
           id: 1,
           title: 'Freelance de website',
           type: 'deposit',
-          category: 'Dev',
+          category: 'Desenvolvimento',
           amount: 6000,
           createdAt: new Date('2021-02-12 09:00:00'),
         },

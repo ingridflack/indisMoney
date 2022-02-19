@@ -70,6 +70,13 @@ button {
   justify-content: center;
 } 
 
+
+.react-modal-overlay {
+  @media (max-width: 576px) {
+    align-items:flex-end;
+  }
+}
+
 .react-modal-content {
   width: 100%;
   max-width: 576px;
@@ -77,6 +84,11 @@ button {
   padding: 3rem;
   position: relative;
   border-radius: 0.25rem;
+
+  @media (max-width: 576px) {
+    border-radius: 1rem;
+  }
+  
 }
 
 .react-modal-close {

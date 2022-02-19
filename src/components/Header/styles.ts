@@ -27,5 +27,13 @@ export const Content = styled.div`
     &:hover {
       filter: brightness(0.9);
     }
+
+    @media (max-width: 576px) {
+      margin-top: 2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
   }
 `
