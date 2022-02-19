@@ -1,9 +1,6 @@
+import { HeaderProps } from '../../types/types'
 import Logo from '../Logo'
 import { Container, Content } from './styles'
-
-interface HeaderProps {
-  onOpenNewTransactionModal: () => void
-}
 
 const Header = ({ onOpenNewTransactionModal }: HeaderProps) => {
   return (

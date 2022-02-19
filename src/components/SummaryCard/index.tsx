@@ -1,11 +1,5 @@
-import { HTMLAttributes } from 'react'
+import { SummaryCardProps } from '../../types/types'
 import { Container } from './styles'
-
-interface SummaryCardProps extends HTMLAttributes<HTMLDivElement> {
-  text: string
-  image: string
-  value: number
-}
 
 const SummaryCard = ({ className, text, image, value }: SummaryCardProps) => {
   return (

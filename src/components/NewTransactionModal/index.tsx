@@ -7,11 +7,8 @@ import outcomeImg from '../../assets/outcome.svg'
 import closeImg from '../../assets/close.svg'
 import { Container, TransactionTypeContainer, RadioBox } from './styles'
 import { useTransactions } from '../../hooks/useTransactions'
+import { NewTransactionModalProps } from '../../types/types'
 
-interface NewTransactionModalProps {
-  isOpen: boolean
-  onRequestClose: () => void
-}
 const NewTransactionModal = ({ isOpen, onRequestClose }: NewTransactionModalProps) => {
   const { createTransaction } = useTransactions()
 
