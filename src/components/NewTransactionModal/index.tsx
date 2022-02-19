@@ -10,7 +10,7 @@ import { useTransactions } from '../../hooks/useTransactions'
 import { NewTransactionModalProps } from '../../types/types'
 
 const NewTransactionModal = ({ isOpen, onRequestClose }: NewTransactionModalProps) => {
-  const { createTransaction } = useTransactions()
+  const { createTransaction, isLoading, setIsLoading } = useTransactions()
 
   const [type, setType] = useState('deposit')
 
@@ -21,12 +21,22 @@ const NewTransactionModal = ({ isOpen, onRequestClose }: NewTransactionModalProp
   const handleCreateNewTransaction = async (e: FormEvent) => {
     e.preventDefault()
 
-    await createTransaction({
-      title,
-      amount,
-      category,
-      type,
-    })
+    try {
+      setIsLoading(true)
+
+      await createTransaction({
+        title,
+        amount,
+        category,
+        type,
+      })
+
+      setIsLoading(false)
+    } catch (e) {
+      setIsLoading(false)
+
+      console.error('Erro', e)
+    }
 
     setTitle('')
     setAmount(0)
@@ -68,7 +78,9 @@ const NewTransactionModal = ({ isOpen, onRequestClose }: NewTransactionModalProp
 
         <input placeholder="Categoria" value={category} onChange={(e) => setCategory(e.target.value)} />
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? 'Cadastrando' : 'Cadastrar'}
+        </button>
       </Container>
     </Modal>
   )

@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from 'react'
+import { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react'
 
 export interface HeaderProps {
   onOpenNewTransactionModal: () => void
@@ -33,4 +33,6 @@ export interface TransactionProviderProps {
 export interface TransactionsContextData {
   transactions: Transaction[]
   createTransaction: (transaction: TransactionInput) => Promise<void>
+  isLoading: boolean
+  setIsLoading: Dispatch<SetStateAction<boolean>>
 }
