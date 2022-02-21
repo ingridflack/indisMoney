@@ -9,7 +9,7 @@
 - [Axios](https://axios-http.com/docs/intro)
 - [Styled Components](https://styled-components.com/docs)
 - [MirageJs](https://miragejs.com/)
--
+
 
 ## Como rodar o projeto
 
